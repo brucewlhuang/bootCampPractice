@@ -33,6 +33,18 @@ class TestClass:
         result = self.cal_func.add(num1, num2)
         assert result < 0.0
 
+    def test_subtract_expect_result_equal_to_one(self):
+        num1 = 3.0
+        num2 = 2.0
+        result = self.cal_func.subtract(num1, num2)
+        assert result == 1.0
+
+    def test_subtract_expect_result_equal_to_minus_one(self):
+        num1 = 2.0
+        num2 = 3.0
+        result = self.cal_func.subtract(num1, num2)
+        assert result == -1.0
+
 
 if __name__ == '__main__':
     pytest.main()

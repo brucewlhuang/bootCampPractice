@@ -45,6 +45,24 @@ class TestClass:
         result = self.cal_func.subtract(num1, num2)
         assert result == -1.0
 
+    def test_multiply_expect_result_equal_to_six(self):
+        num1 = 3.0
+        num2 = 2.0
+        result = self.cal_func.multiply(num1, num2)
+        assert result == 6.0
+
+    def test_multiply_expect_result_equal_to_minus_six(self):
+        num1 = -3.0
+        num2 = 2.0
+        result = self.cal_func.multiply(num1, num2)
+        assert result == -6.0
+
+    def test_multiply_expect_result_equal_to_zero(self):
+        num1 = -3.0
+        num2 = 0.0
+        result = self.cal_func.multiply(num1, num2)
+        assert result == 0.0
+
 
 if __name__ == '__main__':
     pytest.main()

@@ -100,5 +100,19 @@ class TestClass:
         assert result == -1.0
 
 
+    def test_minimum_expect_result_return_one(self):
+        num1 = 3.0
+        num2 = 1.0
+        result = self.cal_func.minimum(num1, num2)
+        assert result == 1.0
+
+
+    def test_minimum_expect_result_return_minus_three(self):
+        num1 = -3.0
+        num2 = -1.0
+        result = self.cal_func.minimum(num1, num2)
+        assert result == -3.0
+
+
 if __name__ == '__main__':
     pytest.main()

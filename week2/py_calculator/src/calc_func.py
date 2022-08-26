@@ -19,3 +19,7 @@ def divide(num1, num2):
 
 def maximum(num1, num2):
     return num1 if num1 > num2 else num2
+
+
+def minimum(num1, num2):
+    return num1 if num1 < num2 else num2

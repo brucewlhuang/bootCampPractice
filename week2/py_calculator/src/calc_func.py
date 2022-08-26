@@ -15,3 +15,7 @@ def divide(num1, num2):
         raise ZeroDivisionError
     else:
         return num1 / num2
+
+
+def maximum(num1, num2):
+    return num1 if num1 > num2 else num2

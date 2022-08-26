@@ -99,13 +99,11 @@ class TestClass:
         result = self.cal_func.maximum(num1, num2)
         assert result == -1.0
 
-
     def test_minimum_expect_result_return_one(self):
         num1 = 3.0
         num2 = 1.0
         result = self.cal_func.minimum(num1, num2)
         assert result == 1.0
-
 
     def test_minimum_expect_result_return_minus_three(self):
         num1 = -3.0

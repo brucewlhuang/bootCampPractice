@@ -63,6 +63,30 @@ class TestClass:
         result = self.cal_func.multiply(num1, num2)
         assert result == 0.0
 
+    def test_divide_expect_result_bigger_than_zero_when_positive_dividend_and_positive_divisor(self):
+        dividend = 5.0
+        divisor = 3.0
+        result = self.cal_func.divide(dividend, divisor)
+        assert result >= 0.0
+
+    def test_divide_expect_result_smaller_than_zero_when_positive_dividend_and_negative_divisor(self):
+        dividend = 3.0
+        divisor = -1.0
+        result = self.cal_func.divide(dividend, divisor)
+        assert result <= 0.0
+
+    def test_divide_expect_result_bigger_than_zero_when_negative_dividend_and_negative_divisor(self):
+        dividend = -3.0
+        divisor = -1.0
+        result = self.cal_func.divide(dividend, divisor)
+        assert result >= 0.0
+
+    @pytest.mark.xfail(raises=ZeroDivisionError)
+    def test_divide_expect_result_should_throw_error_when_divisor_equal_to_zero(self):
+        dividend = 3.0
+        divisor = 0.0
+        self.cal_func.divide(dividend, divisor)
+
 
 if __name__ == '__main__':
     pytest.main()

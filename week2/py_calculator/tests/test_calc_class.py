@@ -37,6 +37,10 @@ class TestClass:
     def test_maximum(self):
         answer = self.cal_func.maximum(self.num1, self.num2)
         self.verify_answer(3.0, answer, self.cal_func.last_answer)
+    
+    def test_minimum(self):
+        answer = self.cal_func.minimum(self.num1, self.num2)
+        self.verify_answer(2.0, answer, self.cal_func.last_answer)
 
 
 if __name__ == '__main__':

@@ -21,3 +21,6 @@ class Calculator(object):
 
     def multiply(self, a, b):
         return self._do_math(a, b, multiply)
+
+    def divide(self, a, b):
+        return self._do_math(a, b, divide)

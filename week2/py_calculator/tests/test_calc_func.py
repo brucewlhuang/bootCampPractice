@@ -87,6 +87,18 @@ class TestClass:
         divisor = 0.0
         self.cal_func.divide(dividend, divisor)
 
+    def test_maximum_expect_result_return_three(self):
+        num1 = 3.0
+        num2 = 1.0
+        result = self.cal_func.maximum(num1, num2)
+        assert result == 3.0
+
+    def test_maximum_expect_result_return_minus_one(self):
+        num1 = -3.0
+        num2 = -1.0
+        result = self.cal_func.maximum(num1, num2)
+        assert result == -1.0
+
 
 if __name__ == '__main__':
     pytest.main()

@@ -15,3 +15,6 @@ class Calculator(object):
 
     def add(self, a, b):
         return self._do_math(a, b, add)
+
+    def subtract(self, a, b):
+        return self._do_math(a, b, subtract)

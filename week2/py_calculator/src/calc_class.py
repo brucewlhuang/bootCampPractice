@@ -27,3 +27,6 @@ class Calculator(object):
 
     def maximum(self, a, b):
         return self._do_math(a, b, maximum)
+
+    def minimum(self, a, b):
+        return self._do_math(a, b, minimum)

@@ -30,6 +30,10 @@ class TestClass:
         answer = self.cal_func.multiply(self.num1, self.num2)
         self.verify_answer(6.0, answer, self.cal_func.last_answer)
 
+    def test_divide(self):
+        answer = self.cal_func.divide(self.num1, self.num2)
+        self.verify_answer(1.5, answer, self.cal_func.last_answer)
+
 
 if __name__ == '__main__':
     pytest.main()

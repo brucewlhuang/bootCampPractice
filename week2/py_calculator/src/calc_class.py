@@ -24,3 +24,6 @@ class Calculator(object):
 
     def divide(self, a, b):
         return self._do_math(a, b, divide)
+
+    def maximum(self, a, b):
+        return self._do_math(a, b, maximum)

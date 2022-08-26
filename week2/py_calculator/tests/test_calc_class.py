@@ -22,6 +22,10 @@ class TestClass:
         answer = self.cal_func.add(self.num1, self.num2)
         self.verify_answer(5.0, answer, self.cal_func.last_answer)
 
+    def test_subtract(self):
+        answer = self.cal_func.subtract(self.num1, self.num2)
+        self.verify_answer(1.0, answer, self.cal_func.last_answer)
+
 
 if __name__ == '__main__':
     pytest.main()

@@ -18,3 +18,6 @@ class Calculator(object):
 
     def subtract(self, a, b):
         return self._do_math(a, b, subtract)
+
+    def multiply(self, a, b):
+        return self._do_math(a, b, multiply)

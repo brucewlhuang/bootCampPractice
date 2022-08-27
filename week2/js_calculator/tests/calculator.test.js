@@ -13,3 +13,13 @@ describe('Test add', ()=>{
     expect(calculator.add('1, -2')).toBe(-1);
   });
 });
+
+describe('Test subtract', ()=>{
+  test('test 2 subtract 1 should be 1', () => {
+    expect(calculator.subtract('2, 1')).toBe(1);
+  });
+
+  test('test 1 subtract 2 should be -1', () => {
+    expect(calculator.subtract('1, 2')).toBe(-1);
+  });
+});

@@ -63,3 +63,21 @@ describe('Test divide', ()=>{
     expect(calculator.divide('0, 0')).toBe(NaN);
   });
 });
+
+describe('Test maximum', ()=>{
+  test('test 2, 4 maximum should be 4', () => {
+    expect(calculator.maximum('2, 4')).toBe(4);
+  });
+
+  test('test 2, 0 maximum should be 2', () => {
+    expect(calculator.maximum('2, 0')).toBe(2);
+  });
+
+  test('test 2, -2 maximum should be 2', () => {
+    expect(calculator.maximum('2, -2')).toBe(2);
+  });
+
+  test('test -1, -2 maximum should be -1', () => {
+    expect(calculator.maximum('-1, -2')).toBe(-1);
+  });
+});

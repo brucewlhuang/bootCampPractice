@@ -23,3 +23,17 @@ describe('Test subtract', ()=>{
     expect(calculator.subtract('1, 2')).toBe(-1);
   });
 });
+
+describe('Test multiply', ()=>{
+  test('test 2 multiply 2 should be 4', () => {
+    expect(calculator.multiply('2, 2')).toBe(4);
+  });
+
+  test('test 2 multiply -1 should be -2', () => {
+    expect(calculator.multiply('2, -1')).toBe(-2);
+  });
+
+  test('test 2 multiply 0 should be 0', () => {
+    expect(calculator.multiply('2, 0')).toBe(0);
+  });
+});

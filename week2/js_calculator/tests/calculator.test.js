@@ -81,3 +81,21 @@ describe('Test maximum', ()=>{
     expect(calculator.maximum('-1, -2')).toBe(-1);
   });
 });
+
+describe('Test minimum', ()=>{
+  test('test 2, 4 minimum should be 2', () => {
+    expect(calculator.minimum('2, 4')).toBe(2);
+  });
+
+  test('test 2, 0 minimum should be 0', () => {
+    expect(calculator.minimum('2, 0')).toBe(0);
+  });
+
+  test('test 2, -2 minimum should be 2', () => {
+    expect(calculator.minimum('2, -2')).toBe(-2);
+  });
+
+  test('test -1, -2 minimum should be -2', () => {
+    expect(calculator.minimum('-1, -2')).toBe(-2);
+  });
+});

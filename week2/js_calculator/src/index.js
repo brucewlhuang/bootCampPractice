@@ -22,6 +22,8 @@ const server = http.createServer(function(request, response) {
         result = calculator.add(numbers);
       } else if (action === 'subtract') {
         result = calculator.subtract(numbers);
+      } else if (action === 'multiply') {
+        result = calculator.multiply(numbers);
       }
       response.writeHead(200, {
         'Content-Type': 'text/html',
@@ -36,6 +38,7 @@ const server = http.createServer(function(request, response) {
                        <input type="text" name="numbers" />
                        <input type="submit" name="action" value="add" />
                        <input type="submit" name="action" value="subtract" />
+                       <input type="submit" name="action" value="multiply" />
                    </form>
                </body>
            </html>`;

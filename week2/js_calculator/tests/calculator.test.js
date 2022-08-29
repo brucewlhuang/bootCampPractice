@@ -37,3 +37,29 @@ describe('Test multiply', ()=>{
     expect(calculator.multiply('2, 0')).toBe(0);
   });
 });
+
+describe('Test divide', ()=>{
+  test('test 2 divide 2 should be 1', () => {
+    expect(calculator.divide('2, 2')).toBe(1);
+  });
+
+  test('test 4 divide -2 should be -2', () => {
+    expect(calculator.divide('4, -2')).toBe(-2);
+  });
+
+  test('test 0 divide 2 should be 0', () => {
+    expect(calculator.divide('0, 2')).toBe(0);
+  });
+
+  test('test 2 divide 0 should be infinity', () => {
+    expect(calculator.divide('2, 0')).toBe(Infinity);
+  });
+
+  test('test -2 divide 0 should be negative infinity', () => {
+    expect(calculator.divide('-2, 0')).toBe(-Infinity);
+  });
+
+  test('test 0 divide 0 should be NaN', () => {
+    expect(calculator.divide('0, 0')).toBe(NaN);
+  });
+});

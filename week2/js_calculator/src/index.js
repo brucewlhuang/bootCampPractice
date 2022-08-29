@@ -26,6 +26,8 @@ const server = http.createServer(function(request, response) {
         result = calculator.multiply(numbers);
       } else if (action === 'divide') {
         result = calculator.divide(numbers);
+      } else if (action === 'maximum') {
+        result = calculator.maximum(numbers);
       }
       response.writeHead(200, {
         'Content-Type': 'text/html',
@@ -42,6 +44,7 @@ const server = http.createServer(function(request, response) {
                        <input type="submit" name="action" value="subtract" />
                        <input type="submit" name="action" value="multiply" />
                        <input type="submit" name="action" value="divide" />
+                       <input type="submit" name="action" value="maximum" />
                    </form>
                </body>
            </html>`;

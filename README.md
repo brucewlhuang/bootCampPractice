@@ -10,3 +10,11 @@
             cd py_calculator/
             py.test --cov-config=.coveragerc --cov=./
             ```
+    * js
+        * runtime: **node v16.13.1**
+        * packages: please kindly check the **package.json** in **js_calculator** folder
+        * command:
+            ```
+            cd js_calculator/
+            npm run test
+            ```

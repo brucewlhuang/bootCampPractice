@@ -33,10 +33,18 @@ function maximum(numbers) {
       .reduce((a, b) => a > b ? a : b);
 }
 
+function minimum(numbers) {
+  return numbers
+      .split(',')
+      .map((x) => parseInt(x))
+      .reduce((a, b) => a > b ? b : a);
+}
+
 module.exports = {
   add,
   subtract,
   multiply,
   divide,
   maximum,
+  minimum,
 };

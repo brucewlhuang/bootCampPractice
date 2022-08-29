@@ -16,7 +16,13 @@ const server = http.createServer(function(request, response) {
     request.on('end', function() {
       const post = qs.parse(body);
       const numbers = post.numbers;
-      const result = calculator.add(numbers);
+      const action = post.action;
+      let result;
+      if (action === 'add') {
+        result = calculator.add(numbers);
+      } else if (action === 'subtract') {
+        result = calculator.subtract(numbers);
+      }
       response.writeHead(200, {
         'Content-Type': 'text/html',
       });
@@ -28,7 +34,8 @@ const server = http.createServer(function(request, response) {
                <body>
                    <form method="post" action="http://localhost:3000">Numbers:
                        <input type="text" name="numbers" />
-                       <input type="submit" value="Add" />
+                       <input type="submit" name="action" value="add" />
+                       <input type="submit" name="action" value="subtract" />
                    </form>
                </body>
            </html>`;
